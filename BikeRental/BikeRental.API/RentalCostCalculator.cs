@@ -15,7 +15,7 @@ namespace BikeRental.API
             if (timeDifference <= 15.0)
                 return 0.0M;
 
-            return rental.Bike.RentalPriceFirstHour + (Convert.ToDecimal(timeDifference / 60 - 60) * rental.Bike.RentalPriceAdditionalHour);
+            return rental.Bike.RentalPriceFirstHour + (Convert.ToDecimal((timeDifference - 60) / 60) * rental.Bike.RentalPriceAdditionalHour);
         }
     }
 }
