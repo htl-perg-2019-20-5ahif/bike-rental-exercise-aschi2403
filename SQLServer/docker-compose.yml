@@ -1,0 +1,8 @@
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
